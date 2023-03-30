@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel=stylesheet href="css/cart.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+
+    <title>01LINE_koreahelpbuy</title>
+</head>
+<body>
+    <!--overlay-->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-close" ></i></a>
+        <div class="overlay-content">
+          <a href="Paragragh.html">Paragraph</a>
+          <a href="vivastudio.html">vivastudio</a>
+          <a href="mahagrid.html">mahagrid</a>
+          <a href="LMC.html">LMC</a>
+        </div>
+      </div>
+      <!--nav-->
+      <div id="navbar">    
+        <a href="index.html">首頁</a>
+        <a href="javascript:void(0)" onclick="openNav()">商品</a>
+        <a href="signin.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+        <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="cart_info ">
+ <!-- 內容 -->
+ <div class="container">
+  <h1 class="cc">購物車</h1><br>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          
+          <th>商品</th>
+          <th>價格</th>
+          <th>數量</th>
+          <th>小計</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          
+          <td><img src="pic/lmc1.jpg" width="150px" ></td>
+          <td>NT$1400</td>
+          <td>1</td>
+          <td>NT$1400</td>
+          <td>
+            <button type="button" class="btn btn-outline-danger">移除</button>
+          </td>
+        </tr>
+        <tr>
+          
+          <td><img src="pic/viva2.jpg" width="150px"></td>
+          <td>NT$1380</td>
+          <td>2</td>
+          <td>NT$2760</td>
+          <td>
+            <button type="button" class="btn btn-outline-danger">移除</button>
+          </td>
+        </tr>
+        <tr>
+          
+          <td><img src="pic/pgh2.jpg" width="150px"></td>
+          <td>NT$2533</td>
+          <td>1</td>
+          <td>NT$2533</td>
+          <td>
+            <button type="button" class="btn btn-outline-danger">移除</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td class="blockquote text-right" colspan="5"><h2 class="aaaa">總計：NT$6693</h2></td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+  <center><div class="row justify-content-md-center">
+    <a href="check.html" style="width: 1000px;"><button type="button" class="btnbuy">去結帳</button></a>
+  </div></center>
+
+<!--logo-->
+<div class="totop">
+    <a href="#top"><img style="width: 200px; height: 200px;" src="pic/donuts.png"></a>
+  </div>
+  <!--footer-->
+  <div class="footer">
+    <h2>Copyright © 2020 01LINE </h2>
+  </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>     
+ <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000);    
+    }
+    </script>
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
+ 
+</body>
+</html>

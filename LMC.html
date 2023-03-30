@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel=stylesheet href="css/list.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+
+    <title>01LINE_koreahelpbuy</title>
+</head>
+<body>
+    <!--overlay-->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-close" ></i></a>
+        <div class="overlay-content">
+          <a href="Paragragh.html">Paragraph</a>
+          <a href="vivastudio.html">vivastudio</a>
+          <a href="mahagrid.html">mahagrid</a>
+          <a href="LMC.html">LMC</a>
+        </div>
+      </div>
+      <!--nav-->
+      <div id="navbar">    
+        <a href="index.html">首頁</a>
+        <a href="javascript:void(0)" onclick="openNav()">商品</a>
+        <a href="signin.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+        <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+    </div>
+
+
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <a href="LMC1.html"><img src="pic/lmc1.jpg" width="100%"></a>
+        <div class="over">
+          <div class="text"><a href="LMC1.html"><img src="pic/lmc1_1.jpg" width="100%"></a></div>
+        </div>
+        <h3>LMC THREE BEARS SWEATSHIRT lt. heather gray</h3>
+        <p>NT$1400</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <a href="LMC2.html"><img src="pic/lmc2.jpg" width="100%"></a>
+        <div class="over">
+          <div class="text"><a href="LMC2.html"><img src="pic/lmc2_1.jpg" width="100%"></a></div>
+        </div>
+        <h3>LMC NIGHT TRAIN LONG SLV TEE white</h3>
+        <p>NT$1450</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <a href="LMC3.html"><img src="pic/lmc3.jpg" width="100%"></a>
+        <div class="over">
+          <div class="text"><a href="LMC3.html"><img src="pic/lmc3_1.jpg" width="100%"></a></div>
+        </div>
+        <h3>LMC BOA FLEECE REVERSIBLE HOODED JACKET</h3>
+        <p>NT$3000</p>
+      </div>
+    </div>
+  </div>
+  
+
+  
+<!--logo-->
+<div class="totop">
+    <a href="#top"><img style="width: 200px; height: 200px;" src="pic/donuts.png"></a>
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+  <!--footer-->
+  <div class="footer">
+    <h2>Copyright © 2020 01LINE </h2>
+  </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>     
+ <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000);    
+    }
+    </script>
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
+ 
+</body>
+</html>
+

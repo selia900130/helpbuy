@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel=stylesheet href="css/first.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+
+    <title>01LINE_koreahelpbuy</title>
+</head>
+<body>
+    <!--overlay-->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-close" ></i></a>
+        <div class="overlay-content">
+          <a href="Paragragh.html">Paragraph</a>
+          <a href="vivastudio.html">vivastudio</a>
+          <a href="mahagrid.html">mahagrid</a>
+          <a href="LMC.html">LMC</a>
+        </div>
+      </div>
+      <!--nav-->
+<div id="navbar">    
+    <a href="index.html">首頁</a>
+    <a href="javascript:void(0)" onclick="openNav()">商品</a>
+    <a href="signin.html"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+    <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+</div>
+<div >
+    <img class="mySlides" src="pic/sh1.jpg" style="width:100%">
+    <img class="mySlides" src="pic/sh2.jpg" style="width:100%">
+    <img class="mySlides" src="pic/sh3.jpg" style="width:100%">
+    <img class="mySlides" src="pic/sh4.jpg" style="width:100%">
+</div>
+<!--logo-->
+<div class="totop">
+    <a href="#top"><img style="width: 200px; height: 200px;" src="pic/donuts.png"></a>
+  </div>
+
+<!--hot-->
+  <br><hr><h1 align="center">熱門排行榜</h1><hr>
+<center><div class="row">
+  <div class="column">
+    <a href="viva2.html">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img style="width: 300px;height: 300px;" src="pic/rank1.jpg">
+          </div>
+            <div class="flip-box-back">
+              <img style="width: 300px;height: 300px;" src="pic/viva2.jpg">
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div class="column">
+    <a href="LMC3.html">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+           <img style="width: 300px;height: 300px;" src="pic/rank2.jpg">
+          </div>
+             <div class="flip-box-back">
+              <img style="width: 300px;height: 300px;" src="pic/lmc3.jpg">
+             </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="column">
+    <a href="mgd2.html">
+      <div class="flip-box">
+         <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img style="width: 300px;height: 300px;" src="pic/rank3.jpg">
+            </div>
+              <div class="flip-box-back">
+                <img style="width: 300px;height: 300px;" src="pic/mgd2.jpg">
+              </div>
+          </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<br><br>
+
+  <!--footer-->
+  <div class="footer">
+    <h5>Copyright © 2020 01LINE </h5>
+  </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>     
+ <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000);    
+    }
+    </script>
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
+ 
+
+
+ 
+</body>
+</html>
